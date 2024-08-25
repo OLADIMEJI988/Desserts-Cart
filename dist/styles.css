@@ -687,8 +687,8 @@ video {
   gap: 1rem;
 }
 
-.gap-\[33px\] {
-  gap: 33px;
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
