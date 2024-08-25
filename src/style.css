@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+     .text-color{
+        color: #230f08;
+     }
+     .add-to-cart-border-color{
+        border-color: #46291f;
+     }
+     .price-color{
+        color: #bc6a4e;
+     }
+     .center-cart{
+        left: 50%;
+        transform: translateX(-50%);
+     }
+     .add-to-cart-bg{
+        background-color: #c83b0e;
+     }
+     .img-border-color{
+      border-color: #c83b0e;
+     }
+}
