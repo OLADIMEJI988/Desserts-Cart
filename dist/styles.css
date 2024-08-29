@@ -446,6 +446,10 @@ video {
   display: none;
 }
 
+.body-color{
+  background-color: #fcf8f5;
+}
+
 .text-color{
   color: #230f08;
 }
@@ -469,6 +473,14 @@ video {
 
 .img-border-color{
   border-color: #c83b0e;
+}
+
+.cart-color{
+  color: #b3431a;
+}
+
+.dirty-brown{
+  color: #85645d;
 }
 
 *, ::before, ::after {
@@ -617,6 +629,11 @@ video {
   z-index: 2;
 }
 
+.mx-4 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
 .mx-5 {
   margin-left: 1.25rem;
   margin-right: 1.25rem;
@@ -625,6 +642,10 @@ video {
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
+}
+
+.mb-1 {
+  margin-bottom: 0.25rem;
 }
 
 .mb-10 {
@@ -639,8 +660,44 @@ video {
   margin-bottom: 9px;
 }
 
+.ml-\[7px\] {
+  margin-left: 7px;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.mr-\[3px\] {
+  margin-right: 3px;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+
+.mt-11 {
+  margin-top: 2.75rem;
+}
+
 .mt-6 {
   margin-top: 1.5rem;
+}
+
+.mt-7 {
+  margin-top: 1.75rem;
+}
+
+.mt-9 {
+  margin-top: 2.25rem;
+}
+
+.mt-\[13px\] {
+  margin-top: 13px;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
@@ -663,6 +720,10 @@ video {
   height: 18px;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .w-\[17px\] {
   width: 17px;
 }
@@ -673,6 +734,14 @@ video {
 
 .w-auto {
   width: auto;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .items-center {
@@ -705,6 +774,10 @@ video {
   border-radius: 0.375rem;
 }
 
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -732,9 +805,27 @@ video {
   padding-right: 1.25rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.py-\[13px\] {
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
+
+.pb-16 {
+  padding-bottom: 4rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -755,13 +846,30 @@ video {
   font-size: 13px;
 }
 
+.text-\[15px\] {
+  font-size: 15px;
+}
+
 .text-\[18px\] {
   font-size: 18px;
+}
+
+.text-\[26px\] {
+  font-size: 26px;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
 }
 
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .font-semibold {
@@ -770,6 +878,10 @@ video {
 
 .tracking-normal {
   letter-spacing: 0em;
+}
+
+.tracking-wide {
+  letter-spacing: 0.025em;
 }
 
 .text-white {
@@ -782,6 +894,26 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.opacity-50 {
+  opacity: 0.5;
+}
+
 .opacity-60 {
   opacity: 0.6;
+}
+
+.opacity-70 {
+  opacity: 0.7;
+}
+
+.opacity-75 {
+  opacity: 0.75;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.opacity-90 {
+  opacity: 0.9;
 }
