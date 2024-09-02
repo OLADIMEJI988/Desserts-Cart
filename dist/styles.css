@@ -591,28 +591,6 @@ video {
   --tw-contain-style:  ;
 }
 
-.container {
-  width: 100%;
-}
-
-@media (min-width: 350px) {
-  .container {
-    max-width: 350px;
-  }
-}
-
-@media (min-width: 765px) {
-  .container {
-    max-width: 765px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1200px;
-  }
-}
-
 .absolute {
   position: absolute;
 }
@@ -694,10 +672,6 @@ video {
 
 .mt-\[13px\] {
   margin-top: 13px;
-}
-
-.mt-5 {
-  margin-top: 1.25rem;
 }
 
 .flex {
@@ -916,4 +890,8 @@ video {
 
 .opacity-90 {
   opacity: 0.9;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

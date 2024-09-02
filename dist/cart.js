@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Select all productCards
+  // Select all product cards
   const productCards = document.querySelectorAll(".card");
   const ordersInactive = document.querySelector(".ordersInactive");
   const ordersActive = document.querySelector(".ordersActive");
@@ -12,8 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const selected = productCard.querySelector(".selected");
 
     addToCartBtn.addEventListener("click", () => {
-      incrementAmount()
-
+      incrementAmount();
     });
 
     // --- adding to cart ---
@@ -23,46 +22,50 @@ document.addEventListener("DOMContentLoaded", function () {
     const orderButton = productCard.querySelector(".order");
 
     let amount = Number(amountDisplay.textContent, 10);
-    
+
     const productDetails = {
       name: productCard.querySelector(".dessertName").textContent,
-      price: parseFloat(productCard.querySelector(".price").textContent.slice(1)),
+      price: parseFloat(
+        productCard.querySelector(".price").textContent.slice(1)
+      ),
       quantity: amount,
-      element: productCard
+      element: productCard,
     };
-
-    // cartItems.push(productDetails)
 
     function decrementAmount() {
       amount -= 1;
 
-     if (amount === 0) {
-      cartItems = cartItems.filter(product => product.name !== productDetails.name)
-     } else {
-      const productInCart = cartItems.find(product => product.name === productDetails.name);
-      productInCart.quantity = amount;
-     }
+      if (amount === 0) {
+        cartItems = cartItems.filter(
+          (product) => product.name !== productDetails.name
+        );
+      } else {
+        const productInCart = cartItems.find(
+          (product) => product.name === productDetails.name
+        );
+        productInCart.quantity = amount;
+      }
 
-     updateUI();
-
+      updateUI();
     }
 
     function incrementAmount() {
       amount += 1;
 
-      const productInCart = cartItems.find(product => product.name === productDetails.name);
-     
+      const productInCart = cartItems.find(
+        (product) => product.name === productDetails.name
+      );
+
       if (productInCart) {
         productInCart.quantity = amount;
       } else {
         cartItems.push({
           ...productDetails,
-          quantity: amount
-        })
+          quantity: amount,
+        });
       }
 
       updateUI();
-
     }
 
     decrementButton.addEventListener("click", decrementAmount);
@@ -95,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
       amountDisplay.textContent = amount;
 
-      updateCartUI()
+      updateCartUI();
     }
   });
 
@@ -103,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartItemCount = document.querySelector(".cart span");
   const cartItemList = document.querySelector(".cart-items");
   const cartTotal = document.querySelector(".cartTotal");
-  
+
   function updateCartUI() {
     updateCartItemCount(cartItems.length);
     updateCartItemList();
@@ -127,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="cart-item-price opacity-50 text-color font-semibold text-sm ml-[7px] mr-[3px]">@$${item.price.toFixed(
         2
       )}</span>
-      <span class="opacity-80 font-semibold text-color text-sm">$${(
+      <span class="item-total opacity-80 font-semibold text-color text-sm">$${(
         item.price * item.quantity
       ).toFixed(2)}</span>
       <button data-index="${index}" class="remove-btn"><img class="pl-auto" src="./images/icon-remove-item.svg" alt=""></button>
@@ -135,6 +138,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
       cartItemList.append(cartItem);
     });
+
+    function removeItemFromCart(index) {
+      const removedItem = cartItems[index];
+
+      // Find the corresponding product card
+      const productCard = removedItem.element;
+      const orderButton = productCard.querySelector(".order");
+      const addToCartBtn = productCard.querySelector(".addToCart");
+      const selected = productCard.querySelector(".selected");
+      const amountDisplay = productCard.querySelector("#amount");
+
+      // Reset amount and UI for the removed item
+      amountDisplay.textContent = 0;
+      orderButton.classList.add("hidden");
+      addToCartBtn.classList.remove("hidden");
+      selected.classList.remove(
+        "border-[3px]",
+        "border-solid",
+        "img-border-color"
+      );
+
+      // Remove the item from cartItems array
+      cartItems = cartItems.filter((_, i) => i !== index);
+
+      // Hide or show the ordersActive/ordersInactive based on remaining cart items
+      if (cartItems.length === 0) {
+        ordersActive.classList.add("hidden");
+        ordersActive.classList.remove("flex-row");
+        ordersInactive.classList.remove("hidden");
+      }
+
+      updateCartUI();
+    }
 
     const removeButtons = document.querySelectorAll(".remove-btn");
     removeButtons.forEach((button) => {
@@ -145,29 +181,11 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function removeItemFromCart(index) {
-    const productCard = cartItems[index].element;
-    const orderButton = productCard.querySelector(".order");
-    const addToCartBtn = productCard.querySelector(".addToCart");
-    const selected = productCard.querySelector(".selected");
-
-    orderButton.classList.add("hidden");
-    addToCartBtn.classList.remove("hidden");
-    selected.classList.remove(
-      "border-[3px]",
-      "border-solid",
-      "img-border-color"
-    );
-    ordersActive.classList.add("hidden");
-    ordersActive.classList.remove("flex-row");
-    ordersInactive.classList.remove("hidden");
-
-    cartItems = cartItems.filter((_, i) => i !== index);
-    updateCartUI();
-  }
-
   function updateCartTotal() {
-    const totalAmount = cartItems.reduce((prev, curr) => prev+= curr.price, 0)
+    const totalAmount = cartItems.reduce(
+      (prev, curr) => (prev += curr.price * curr.quantity),
+      0
+    );
     cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
   }
 });
