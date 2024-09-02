@@ -142,15 +142,13 @@ document.addEventListener("DOMContentLoaded", function () {
     function removeItemFromCart(index) {
       const removedItem = cartItems[index];
 
-      // Find the corresponding product card
       const productCard = removedItem.element;
       const orderButton = productCard.querySelector(".order");
       const addToCartBtn = productCard.querySelector(".addToCart");
       const selected = productCard.querySelector(".selected");
       const amountDisplay = productCard.querySelector("#amount");
 
-      // Reset amount and UI for the removed item
-      amountDisplay.textContent = 0;
+      // update UI for the removed item
       orderButton.classList.add("hidden");
       addToCartBtn.classList.remove("hidden");
       selected.classList.remove(
@@ -162,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // Remove the item from cartItems array
       cartItems = cartItems.filter((_, i) => i !== index);
 
-      // Hide or show the ordersActive/ordersInactive based on remaining cart items
+      // Hide/show the ordersActive/ordersInactive based on remaining cart items
       if (cartItems.length === 0) {
         ordersActive.classList.add("hidden");
         ordersActive.classList.remove("flex-row");
