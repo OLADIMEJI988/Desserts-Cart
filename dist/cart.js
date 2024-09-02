@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="item-total opacity-80 font-semibold text-color text-sm">$${(
         item.price * item.quantity
       ).toFixed(2)}</span>
-      <button data-index="${index}" class="remove-btn"><img class="pl-auto" src="./images/icon-remove-item.svg" alt=""></button>
+      <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-4 w-4"><img class="ml-[3px]" src="./images/icon-remove-item.svg" alt=""></button>
       `;
 
       cartItemList.append(cartItem);

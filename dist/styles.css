@@ -458,6 +458,10 @@ video {
   border-color: #46291f;
 }
 
+.remove-color{
+  border-color: #a89b9e;
+}
+
 .price-color{
   color: #bc6a4e;
 }
@@ -638,6 +642,10 @@ video {
   margin-bottom: 9px;
 }
 
+.ml-\[3px\] {
+  margin-left: 3px;
+}
+
 .ml-\[7px\] {
   margin-left: 7px;
 }
@@ -674,12 +682,20 @@ video {
   margin-top: 13px;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
 
 .hidden {
   display: none;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-5 {
@@ -696,6 +712,10 @@ video {
 
 .h-auto {
   height: auto;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-\[17px\] {
