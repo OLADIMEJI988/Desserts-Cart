@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       incrementAmount();
     });
 
-    // --- adding to cart ---
+    // --- increment and decrement cart ---
     const decrementButton = productCard.querySelector("#decrement");
     const incrementButton = productCard.querySelector("#increment");
     const amountDisplay = productCard.querySelector("#amount");
@@ -39,6 +39,22 @@ document.addEventListener("DOMContentLoaded", function () {
         cartItems = cartItems.filter(
           (product) => product.name !== productDetails.name
         );
+
+        // Reset the UI for the corresponding product card
+        orderButton.classList.add("hidden");
+        addToCartBtn.classList.remove("hidden");
+        selected.classList.remove(
+          "border-[3px]",
+          "border-solid",
+          "img-border-color"
+        );
+
+        // Check for the last item in the cart
+        if (cartItems.length === 0) {
+          ordersActive.classList.add("hidden");
+          ordersActive.classList.remove("flex-row");
+          ordersInactive.classList.remove("hidden");
+        }
       } else {
         const productInCart = cartItems.find(
           (product) => product.name === productDetails.name
@@ -84,17 +100,6 @@ document.addEventListener("DOMContentLoaded", function () {
         ordersActive.classList.remove("hidden");
         ordersActive.classList.add("flex-row");
         ordersInactive.classList.add("hidden");
-      } else {
-        orderButton.classList.add("hidden");
-        addToCartBtn.classList.remove("hidden");
-        selected.classList.remove(
-          "border-[3px]",
-          "border-solid",
-          "img-border-color"
-        );
-        ordersActive.classList.add("hidden");
-        ordersActive.classList.remove("flex-row");
-        ordersInactive.classList.remove("hidden");
       }
       amountDisplay.textContent = amount;
 
@@ -102,7 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // adding to cart
+  // updating cart
   const cartItemCount = document.querySelector(".cart span");
   const cartItemList = document.querySelector(".cart-items");
   const cartTotal = document.querySelector(".cartTotal");
@@ -148,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const selected = productCard.querySelector(".selected");
       const amountDisplay = productCard.querySelector("#amount");
 
-      // update UI for the removed item
+      // Reset UI for the removed item
       orderButton.classList.add("hidden");
       addToCartBtn.classList.remove("hidden");
       selected.classList.remove(
@@ -157,10 +162,10 @@ document.addEventListener("DOMContentLoaded", function () {
         "img-border-color"
       );
 
-      // Remove the item from cartItems array
+      // Remove the specific item from cartItems array
       cartItems = cartItems.filter((_, i) => i !== index);
 
-      // Hide/show the ordersActive/ordersInactive based on remaining cart items
+      // Hides or show the ordersActive/ordersInactive based on remaining cart items
       if (cartItems.length === 0) {
         ordersActive.classList.add("hidden");
         ordersActive.classList.remove("flex-row");
@@ -179,6 +184,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
+  // update total amount of orders made
   function updateCartTotal() {
     const totalAmount = cartItems.reduce(
       (prev, curr) => (prev += curr.price * curr.quantity),
