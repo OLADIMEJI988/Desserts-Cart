@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <span class="cart-item-price opacity-50 text-color font-semibold text-sm ml-[7px] mr-[3px]">@$${item.price.toFixed(
         2
       )}</span>
-      <span class="item-total opacity-80 font-semibold text-color text-sm">$${(
+      <span class="opacity-80 font-semibold text-color text-sm">$${(
         item.price * item.quantity
       ).toFixed(2)}</span>
       <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-4 w-4"><img class="ml-[3px]" src="./images/icon-remove-item.svg" alt=""></button>
@@ -151,7 +151,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const orderButton = productCard.querySelector(".order");
       const addToCartBtn = productCard.querySelector(".addToCart");
       const selected = productCard.querySelector(".selected");
-      // const amountDisplay = productCard.querySelector("#amount");
 
       // Reset UI for the removed item
       orderButton.classList.add("hidden");
@@ -193,12 +192,47 @@ document.addEventListener("DOMContentLoaded", function () {
     cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
   }
 
+  const confirmedOrder = document.querySelector(".confirmedOrder");
+  const confirmedTotal = document.querySelector(".confirmedTotal");
+
+  function updateConfirmedOrder() {
+    confirmedOrder.innerHTML = ""; // Clear the previous content
+    cartItems.forEach((item) => {
+      const confirmedItem = document.createElement("div");
+      confirmedItem.classList.add("cart-item", "individual-cart-item");
+      confirmedItem.innerHTML = `
+      <p class="font-semibold text-sm text-color mb-1 mt-6">${item.name}</p>
+      <span class="text-[15px] font-bold flex-row cart-color">${
+        item.quantity
+      }x</span>
+      <span class="cart-item-price opacity-50 text-color font-semibold text-sm ml-[7px] mr-[3px]">@$${item.price.toFixed(
+        2
+      )}</span>
+      <span class="item-total opacity-80 font-semibold text-color text-sm">$${(
+        item.price * item.quantity
+      ).toFixed(2)}</span>
+      `;
+
+      confirmedOrder.append(confirmedItem);
+    });
+  }
+
+  function updateConfirmedTotal() {
+    const amountToPay = cartItems.reduce(
+      (prev, curr) => (prev += curr.price * curr.quantity),
+      0
+    );
+    confirmedTotal.textContent = `$${amountToPay.toFixed(2)}`;
+  }
+
   const popUp = document.querySelector("#popUp");
   const confirmBtn = document.querySelector(".confirm");
   const newOrderBtn = document.querySelector(".newOrder");
   const cartActive = document.querySelector("#cartActive");
 
   function openPopUp() {
+    updateConfirmedOrder(); // Update the confirmed order when the pop-up opens
+    updateConfirmedTotal(); // Update the confirmed total when the pop-up opens
     popUp.classList.remove("hidden");
     popUp.classList.add("flex-row");
     cartActive.classList.remove("flex-row");
