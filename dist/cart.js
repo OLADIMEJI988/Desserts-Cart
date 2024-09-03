@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // update total amount of orders made
+  // update total amount of orders
   function updateCartTotal() {
     const totalAmount = cartItems.reduce(
       (prev, curr) => (prev += curr.price * curr.quantity),
@@ -196,7 +196,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const confirmedTotal = document.querySelector(".confirmedTotal");
 
   function updateConfirmedOrder() {
-    confirmedOrder.innerHTML = ""; // Clear the previous content
+    // target the confirmedOrder div in the html
+    confirmedOrder.innerHTML = "";
     cartItems.forEach((item) => {
       const confirmedItem = document.createElement("div");
       confirmedItem.classList.add("cart-item", "individual-cart-item");
@@ -231,8 +232,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartActive = document.querySelector("#cartActive");
 
   function openPopUp() {
-    updateConfirmedOrder(); // Update the confirmed order when the pop-up opens
-    updateConfirmedTotal(); // Update the confirmed total when the pop-up opens
+    // Update the confirmed order when the pop-up opens
+    updateConfirmedOrder();
+    // Update the confirmed total when the pop-up opens
+    updateConfirmedTotal();
     popUp.classList.remove("hidden");
     popUp.classList.add("flex-row");
     cartActive.classList.remove("flex-row");
