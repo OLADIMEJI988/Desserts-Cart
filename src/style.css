@@ -34,4 +34,11 @@
      .dirty-brown{
       color: #85645d;
      }
+     .space{
+      line-height: 46px;
+      letter-spacing: 0.3px;
+     }
+     .order-bg{
+      background-color: #fcf8f5;
+     }
 }

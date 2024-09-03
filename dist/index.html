@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="antialiased body-color">
-    <p class="text-color text-2xl my-4 mx-5 font-semibold">Desserts</p>
+    <p class="text-color text-4xl my-6 mx-5 font-bold tracking-normal">
+      Desserts
+    </p>
     <!-- Waffles -->
     <div class="card mx-5 relative z-[2] mb-10">
       <img
@@ -389,7 +391,7 @@
           <p class="mr-auto text-[13px] font-semibold opacity-70">
             Order Total
           </p>
-          <div class="cartTotal font-bold text-2xl text-color">$0.00</div>
+          <div class="cartTotal font-bold text-[27px] text-color">$0.00</div>
         </div>
         <div class="mx-4">
           <div class="flex mt-6">
@@ -405,6 +407,33 @@
           </button>
         </div>
       </div>
+    </div>
+
+    <!-- order pop up -->
+    <div class="hidden bg-white mt-10 px-6 py-8 rounded-t-3xl">
+      <img class="mb-4" src="../dist/images/icon-order-confirmed.svg" alt="" />
+      <p class="text-[38px] mr-2 space text-color font-bold">Order Confirmed</p>
+      <p
+        class="mt-[7px] text-sm font-semibold tracking-normal text-color opacity-60"
+      >
+        We hope you enjoy your food!
+      </p>
+      <div class="order-bg mt-8 rounded-md">
+        <div class="confirmedOrder"></div>
+        <div
+          class="total--amount flex justify-center items-center px-5 py-[14px]"
+        >
+          <p class="mr-auto text-[13px] font-semibold opacity-70">
+            Order Total
+          </p>
+          <div class="cartTotal font-bold text-[27px] text-color">$0.00</div>
+        </div>
+      </div>
+      <button
+        class="add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
+      >
+        Start New Order
+      </button>
     </div>
     <script src="./cart.js"></script>
   </body>
