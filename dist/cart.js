@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const orderButton = productCard.querySelector(".order");
       const addToCartBtn = productCard.querySelector(".addToCart");
       const selected = productCard.querySelector(".selected");
-      const amountDisplay = productCard.querySelector("#amount");
+      // const amountDisplay = productCard.querySelector("#amount");
 
       // Reset UI for the removed item
       orderButton.classList.add("hidden");
@@ -192,4 +192,26 @@ document.addEventListener("DOMContentLoaded", function () {
     );
     cartTotal.textContent = `$${totalAmount.toFixed(2)}`;
   }
+
+  const popUp = document.querySelector("#popUp");
+  const confirmBtn = document.querySelector(".confirm");
+  const newOrderBtn = document.querySelector(".newOrder");
+  const cartActive = document.querySelector("#cartActive");
+
+  function openPopUp() {
+    popUp.classList.remove("hidden");
+    popUp.classList.add("flex-row");
+    cartActive.classList.remove("flex-row");
+    cartActive.classList.add("hidden");
+  }
+
+  function closePopUp() {
+    popUp.classList.add("hidden");
+    popUp.classList.remove("flex-row");
+    cartActive.classList.add("flex-row");
+    cartActive.classList.remove("hidden");
+  }
+
+  confirmBtn.addEventListener("click", openPopUp);
+  newOrderBtn.addEventListener("click", closePopUp);
 });

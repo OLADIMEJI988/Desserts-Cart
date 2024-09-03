@@ -365,8 +365,8 @@
 
     <!-- Cart -->
     <div
-      id="cart-active"
-      class="mx-5 bg-white h-auto rounded-xl pt-4 pb-16 px-6"
+      id="cartActive"
+      class="mx-5 flex-row bg-white h-auto rounded-xl pt-4 pb-16 px-6"
     >
       <p class="cart cart-color text-[26px] font-bold opacity-90">
         Your Cart (<span>0</span>)
@@ -401,7 +401,7 @@
             </p>
           </div>
           <button
-            class="add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
+            class="confirm add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
           >
             Confirm Order
           </button>
@@ -410,7 +410,7 @@
     </div>
 
     <!-- order pop up -->
-    <div class="hidden bg-white mt-10 px-6 py-8 rounded-t-3xl">
+    <div id="popUp" class="hidden bg-white mt-10 px-6 py-8 rounded-t-3xl">
       <img class="mb-4" src="../dist/images/icon-order-confirmed.svg" alt="" />
       <p class="text-[38px] mr-2 space text-color font-bold">Order Confirmed</p>
       <p
@@ -430,7 +430,7 @@
         </div>
       </div>
       <button
-        class="add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
+        class="newOrder add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
       >
         Start New Order
       </button>
