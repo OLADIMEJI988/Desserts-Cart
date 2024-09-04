@@ -128,17 +128,18 @@ document.addEventListener("DOMContentLoaded", function () {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cart-item", "individual-cart-item");
       cartItem.innerHTML = `
-      <p class="font-semibold text-sm text-color mb-1 mt-6">${item.name}</p>
-      <span class="text-[15px] font-bold flex-row cart-color">${
-        item.quantity
-      }x</span>
-      <span class="cart-item-price opacity-50 text-color font-semibold text-sm ml-[7px] mr-[3px]">@$${item.price.toFixed(
+      <p class="font-semibold text-[15px] text-color mb-2 mt-6">${item.name}</p>
+      <div class="flex">
+      <p class="text-[15px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="cart-item-price opacity-50 text-color font-semibold text-sm mx-3">@$${item.price.toFixed(
         2
-      )}</span>
-      <span class="opacity-80 font-semibold text-color text-sm">$${(
+      )}</p>
+      <p class="opacity-80 font-semibold text-color text-sm">$${(
         item.price * item.quantity
-      ).toFixed(2)}</span>
-      <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-4 w-4"><img class="ml-[3px]" src="./images/icon-remove-item.svg" alt=""></button>
+      ).toFixed(2)}</p>
+      <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-5 w-5 ml-auto -mt-[10px]"><img class="ml-[3px] h-3" src="./images/icon-remove-item.svg" alt=""></button>
+      </div>
+      <div class="lineColor h-[1px] w-auto mt-3 opacity-10"></div>
       `;
 
       cartItemList.append(cartItem);
@@ -202,16 +203,19 @@ document.addEventListener("DOMContentLoaded", function () {
       const confirmedItem = document.createElement("div");
       confirmedItem.classList.add("cart-item", "individual-cart-item");
       confirmedItem.innerHTML = `
-      <p class="font-semibold text-sm text-color mb-1 mt-6">${item.name}</p>
-      <span class="text-[15px] font-bold flex-row cart-color">${
-        item.quantity
-      }x</span>
-      <span class="cart-item-price opacity-50 text-color font-semibold text-sm ml-[7px] mr-[3px]">@$${item.price.toFixed(
+      <p class="font-semibold text-[15px] text-color mt-4 pb-1.5">${
+        item.name
+      }</p>
+      <div class="flex">
+      <p class="text-[15px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="cart-item-price opacity-50 text-color font-semibold text-sm ml-5">@$${item.price.toFixed(
         2
-      )}</span>
-      <span class="item-total opacity-80 font-semibold text-color text-sm">$${(
+      )}</p>
+      <p class="item-total ml-auto opacity-80 font-semibold text-color text-[16px] -mt-2">$${(
         item.price * item.quantity
-      ).toFixed(2)}</span>
+      ).toFixed(2)}</p>
+      </div>
+      <div class="bg-slate-400 h-[1px] w-auto mt-2 opacity-20"></div>
       `;
 
       confirmedOrder.append(confirmedItem);
