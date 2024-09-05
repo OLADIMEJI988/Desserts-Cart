@@ -652,6 +652,10 @@ video {
   margin-top: -10px;
 }
 
+.mb-1\.5 {
+  margin-bottom: 0.375rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -682,6 +686,10 @@ video {
 
 .ml-auto {
   margin-left: auto;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
 }
 
 .mr-2 {
@@ -792,6 +800,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[650px\] {
+  max-width: 650px;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -892,10 +904,6 @@ video {
   padding-bottom: 14px;
 }
 
-.pb-1\.5 {
-  padding-bottom: 0.375rem;
-}
-
 .pb-16 {
   padding-bottom: 4rem;
 }
@@ -982,6 +990,10 @@ video {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.opacity-10 {
+  opacity: 0.1;
+}
+
 .opacity-20 {
   opacity: 0.2;
 }
@@ -1010,10 +1022,108 @@ video {
   opacity: 0.9;
 }
 
-.opacity-10 {
-  opacity: 0.1;
-}
-
 .filter {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+@media (min-width: 640px) {
+  .sm\:griD{
+    display: grid;
+    grid-template-columns: 320px 320px;
+  }
+}
+
+@media (min-width: 967px) {
+  .lg\:grId{
+    display: grid;
+    grid-template-columns: 320px 320px 320px;
+  }
+}
+
+@media (min-width: 640px) {
+  .sm\:top-\[160px\] {
+    top: 160px;
+  }
+
+  .sm\:mx-20 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .sm\:mx-\[18px\] {
+    margin-left: 18px;
+    margin-right: 18px;
+  }
+
+  .sm\:-mt-\[10px\] {
+    margin-top: -10px;
+  }
+
+  .sm\:-mt-\[11px\] {
+    margin-top: -11px;
+  }
+
+  .sm\:mb-\[10px\] {
+    margin-bottom: 10px;
+  }
+
+  .sm\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .sm\:mt-8 {
+    margin-top: 2rem;
+  }
+
+  .sm\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .sm\:py-6 {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .sm\:py-\[15px\] {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .sm\:text-\[14px\] {
+    font-size: 14px;
+  }
+
+  .sm\:text-\[15px\] {
+    font-size: 15px;
+  }
+
+  .sm\:text-\[16px\] {
+    font-size: 16px;
+  }
+
+  .sm\:text-\[28px\] {
+    font-size: 28px;
+  }
+
+  .sm\:text-\[29px\] {
+    font-size: 29px;
+  }
+}
+
+@media (min-width: 967px) {
+  .lg\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .lg\:mx-28 {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+
+  .lg\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
 }

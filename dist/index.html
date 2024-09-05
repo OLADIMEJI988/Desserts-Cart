@@ -10,370 +10,376 @@
     <p class="text-color text-4xl my-6 mx-5 font-bold tracking-normal">
       Desserts
     </p>
-    <!-- Waffles -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-waffle-mobile.jpg"
-        alt=""
-      />
+    <div class="sm:griD lg:grId flex-row items-center justify-center">
+      <!-- Waffles -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-waffle-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Waffle</p>
-        <p class="dessertName font-semibold">Waffle with Berries</p>
-        <p class="price price-color font-semibold">$6.50</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Waffle</p>
+          <p class="dessertName font-semibold">Waffle with Berries</p>
+          <p class="price price-color font-semibold">$6.50</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Crème Brûlée -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-creme-brulee-mobile.jpg"
-        alt=""
-      />
+      <!-- Crème Brûlée -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-creme-brulee-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">
-          Crème Brûlée
-        </p>
-        <p class="dessertName font-semibold">Vanilla Bean Crème Brûlée</p>
-        <p class="price price-color font-semibold">$7.00</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">
+            Crème Brûlée
+          </p>
+          <p class="dessertName font-semibold">Vanilla Bean Crème Brûlée</p>
+          <p class="price price-color font-semibold">$7.00</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Macaron -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-macaron-mobile.jpg"
-        alt=""
-      />
+      <!-- Macaron -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-macaron-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Macaron</p>
-        <p class="dessertName font-semibold">Macaron Mix of Five</p>
-        <p class="price price-color font-semibold">$8.00</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Macaron</p>
+          <p class="dessertName font-semibold">Macaron Mix of Five</p>
+          <p class="price price-color font-semibold">$8.00</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Tiramisu -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-tiramisu-mobile.jpg"
-        alt=""
-      />
+      <!-- Tiramisu -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-tiramisu-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Tiramisu</p>
-        <p class="dessertName font-semibold">Classic Tiramisu</p>
-        <p class="price price-color font-semibold">$5.50</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Tiramisu</p>
+          <p class="dessertName font-semibold">Classic Tiramisu</p>
+          <p class="price price-color font-semibold">$5.50</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Baklava -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-baklava-mobile.jpg"
-        alt=""
-      />
+      <!-- Baklava -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-baklava-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Baklava</p>
-        <p class="dessertName font-semibold">Pistachio Baklava</p>
-        <p class="price price-color font-semibold">$4.00</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Baklava</p>
+          <p class="dessertName font-semibold">Pistachio Baklava</p>
+          <p class="price price-color font-semibold">$4.00</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Pie -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-meringue-mobile.jpg"
-        alt=""
-      />
+      <!-- Pie -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-meringue-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Pie</p>
-        <p class="dessertName font-semibold">Lemon Meringue Pie</p>
-        <p class="price price-color font-semibold">$5.00</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Pie</p>
+          <p class="dessertName font-semibold">Lemon Meringue Pie</p>
+          <p class="price price-color font-semibold">$5.00</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Cake -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-cake-mobile.jpg"
-        alt=""
-      />
+      <!-- Cake -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-cake-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Cake</p>
-        <p class="dessertName font-semibold">Red Velvet Cake</p>
-        <p class="price price-color font-semibold">$4.50</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Cake</p>
+          <p class="dessertName font-semibold">Red Velvet Cake</p>
+          <p class="price price-color font-semibold">$4.50</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Brownie -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-brownie-mobile.jpg"
-        alt=""
-      />
+      <!-- Brownie -->
+      <div class="card max-w-[650px] mx-5 relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-brownie-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Brownie</p>
-        <p class="dessertName font-semibold">Salted Caramel Brownie</p>
-        <p class="price price-color font-semibold">$5.50</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">Brownie</p>
+          <p class="dessertName font-semibold">Salted Caramel Brownie</p>
+          <p class="price price-color font-semibold">$5.50</p>
+        </div>
       </div>
-    </div>
 
-    <!-- Panna Cotta -->
-    <div class="card mx-5 relative z-[2] mb-10">
-      <img
-        class="rounded-md selected"
-        src="./images/image-panna-cotta-mobile.jpg"
-        alt=""
-      />
+      <!-- Panna Cotta -->
+      <div class="card mx-5 max-w-[650px] relative z-[2] mb-10">
+        <img
+          class="rounded-md selected"
+          src="./images/image-panna-cotta-mobile.jpg"
+          alt=""
+        />
 
-      <button
-        class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px]"
-      >
-        <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
-        <p class="text-color text-[13px] font-semibold">Add to Cart</p>
-      </button>
-
-      <button
-        class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px]"
-      >
-        <div
-          class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+        <button
+          class="addToCart flex text-center w-auto space-x-2 py-2 px-5 bg-white border add-to-cart-border-color rounded-full absolute center-cart top-[180px] sm:top-[160px]"
         >
-          <p id="decrement" class="mb-[9px]">-</p>
-        </div>
-        <p id="amount" class="font-semibold text-[18px]">0</p>
-        <div
-          id="increment"
-          class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
-        >
-          <p class="mb-[6px]">+</p>
-        </div>
-      </button>
+          <img class="h-5" src="../dist/images/icon-add-to-cart.svg" alt="" />
+          <p class="text-color text-[13px] font-semibold">Add to Cart</p>
+        </button>
 
-      <div class="gap-4 mt-6">
-        <p class="text-xs text-color opacity-60 tracking-normal">Panna Cotta</p>
-        <p class="dessertName font-semibold">Vanilla Panna Cotta</p>
-        <p class="price price-color font-semibold">$6.50</p>
+        <button
+          class="order content hidden text-center w-auto gap-9 items-center justify-center py-2 px-2 add-to-cart-bg text-white rounded-full absolute center-cart top-[180px] sm:top-[160px]"
+        >
+          <div
+            class="active border border-solid rounded-full font-semibold w-[17px] h-[17px] flex items-center justify-center text-4xl"
+          >
+            <p id="decrement" class="mb-[9px]">-</p>
+          </div>
+          <p id="amount" class="font-semibold text-[18px]">0</p>
+          <div
+            id="increment"
+            class="border border-solid rounded-full font-semibold w-[18px] h-[18px] flex items-center justify-center text-2xl"
+          >
+            <p class="mb-[6px]">+</p>
+          </div>
+        </button>
+
+        <div class="gap-4 mt-6 sm:mt-8">
+          <p class="text-xs text-color opacity-60 tracking-normal">
+            Panna Cotta
+          </p>
+          <p class="dessertName font-semibold">Vanilla Panna Cotta</p>
+          <p class="price price-color font-semibold">$6.50</p>
+        </div>
       </div>
     </div>
 
     <!-- Cart -->
     <div
       id="cartActive"
-      class="mx-5 flex-row bg-white h-auto rounded-xl pt-4 pb-16 px-6"
+      class="mx-5 flex-row bg-white h-auto rounded-xl pt-4 pb-16 px-6 sm:mx-20 sm:px-12 sm:py-6 lg:mx-32"
     >
-      <p class="cart cart-color text-[26px] font-bold opacity-90">
+      <p
+        class="cart cart-color text-[26px] sm:text-[28px] font-bold opacity-90"
+      >
         Your Cart (<span>0</span>)
       </p>
       <div class="ordersInactive flex-row">
         <img
-          class="ml-auto mr-auto mt-11"
+          class="ml-auto mr-auto mt-11 sm:mt-14"
           src="./images/illustration-empty-cart.svg"
           alt=""
         />
@@ -388,20 +394,28 @@
 
       <div class="ordersActive hidden mt-7">
         <div class="total--amount flex justify-center items-center">
-          <p class="mr-auto text-[13px] font-semibold opacity-70">
+          <p
+            class="mr-auto text-[13px] sm:text-[14px] font-semibold opacity-70"
+          >
             Order Total
           </p>
-          <div class="cartTotal font-bold text-[27px] text-color">$0.00</div>
+          <div
+            class="cartTotal font-bold text-[27px] sm:text-[29px] text-color"
+          >
+            $0.00
+          </div>
         </div>
         <div class="mx-4">
-          <div class="flex mt-6">
+          <div class="flex mt-6 mr-1">
             <img src="./images/icon-carbon-neutral.svg" alt="" />
-            <p class="text-sm font-semibold opacity-75 text-color">
+            <p
+              class="text-sm sm:text-[15px] font-semibold opacity-75 text-color"
+            >
               This is a <span class="font-bold">carbon-neutral</span> delivery
             </p>
           </div>
           <button
-            class="confirm add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
+            class="confirm add-to-cart-bg w-full py-[13px] sm:py-[15px] rounded-full mt-9 text-white font-semibold text-sm sm:text-[16px] tracking-wide flex items-center justify-center opacity-90"
           >
             Confirm Order
           </button>
@@ -410,7 +424,10 @@
     </div>
 
     <!-- order pop up -->
-    <div id="popUp" class="hidden bg-white mt-10 px-6 py-8 rounded-t-3xl">
+    <div
+      id="popUp"
+      class="hidden bg-white mt-10 px-6 py-8 sm:mx-20 sm:px-12 rounded-t-3xl lg:mx-32"
+    >
       <img class="mb-4" src="../dist/images/icon-order-confirmed.svg" alt="" />
       <p class="text-[38px] mr-2 space text-color font-bold">Order Confirmed</p>
       <p
@@ -423,16 +440,20 @@
         <div
           class="total--amount flex justify-center items-center mt-3 px-6 py-[14px]"
         >
-          <p class="mr-auto text-[13px] font-semibold opacity-70">
+          <p
+            class="mr-auto text-[13px] sm:text-[14px] font-semibold opacity-70"
+          >
             Order Total
           </p>
-          <div class="confirmedTotal font-bold text-[27px] text-color">
+          <div
+            class="confirmedTotal font-bold text-[27px] sm:text-[29px] text-color"
+          >
             $0.00
           </div>
         </div>
       </div>
       <button
-        class="newOrder add-to-cart-bg w-full py-[13px] rounded-full mt-9 text-white font-semibold text-sm tracking-wide flex items-center justify-center opacity-90"
+        class="newOrder add-to-cart-bg w-full py-[13px] sm:py-[15px] rounded-full mt-9 text-white font-semibold text-sm sm:text-[16px] tracking-wide flex items-center justify-center opacity-90"
       >
         Start New Order
       </button>

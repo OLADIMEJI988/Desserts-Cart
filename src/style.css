@@ -44,4 +44,12 @@
      .lineColor{
       background-color: #230f08;
      }
+     .griD{
+       display: grid;
+       grid-template-columns: 320px 320px;
+     }
+     .grId{
+      display: grid;
+      grid-template-columns: 320px 320px 320px;
+     }
 }

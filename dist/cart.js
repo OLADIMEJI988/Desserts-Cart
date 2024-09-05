@@ -128,16 +128,16 @@ document.addEventListener("DOMContentLoaded", function () {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cart-item", "individual-cart-item");
       cartItem.innerHTML = `
-      <p class="font-semibold text-[15px] text-color mb-2 mt-6">${item.name}</p>
+      <p class="font-semibold text-[15px] sm:text-[16px] text-color mb-2 sm:mb-[10px] mt-6">${item.name}</p>
       <div class="flex">
-      <p class="text-[15px] font-bold flex-row cart-color">${item.quantity}x</p>
-      <p class="cart-item-price opacity-50 text-color font-semibold text-sm mx-3">@$${item.price.toFixed(
+      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="cart-item-price opacity-50 text-color font-semibold text-sm sm:text-[15px] mx-3 sm:mx-[18px]">@$${item.price.toFixed(
         2
       )}</p>
-      <p class="opacity-80 font-semibold text-color text-sm">$${(
+      <p class="opacity-80 font-semibold text-color text-sm sm:text-[15px]">$${(
         item.price * item.quantity
       ).toFixed(2)}</p>
-      <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-5 w-5 ml-auto -mt-[10px]"><img class="ml-[3px] h-3" src="./images/icon-remove-item.svg" alt=""></button>
+      <button data-index="${index}" class="remove-btn border rounded-full border-solid remove-color h-5 w-5 ml-auto -mt-[10px] sm:-mt-[11px]"><img class="ml-[3px] h-3" src="./images/icon-remove-item.svg" alt=""></button>
       </div>
       <div class="lineColor h-[1px] w-auto mt-3 opacity-10"></div>
       `;
@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const orderButton = productCard.querySelector(".order");
       const addToCartBtn = productCard.querySelector(".addToCart");
       const selected = productCard.querySelector(".selected");
-
+      
       // Reset UI for the removed item
       orderButton.classList.add("hidden");
       addToCartBtn.classList.remove("hidden");
@@ -203,15 +203,15 @@ document.addEventListener("DOMContentLoaded", function () {
       const confirmedItem = document.createElement("div");
       confirmedItem.classList.add("cart-item", "individual-cart-item");
       confirmedItem.innerHTML = `
-      <p class="font-semibold text-[15px] text-color mt-4 pb-1.5">${
+      <p class="font-semibold text-[15px] sm:text-[16px] text-color mt-4 mb-1.5 sm:mb-[10px]">${
         item.name
       }</p>
       <div class="flex">
-      <p class="text-[15px] font-bold flex-row cart-color">${item.quantity}x</p>
-      <p class="cart-item-price opacity-50 text-color font-semibold text-sm ml-5">@$${item.price.toFixed(
+      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="cart-item-price opacity-50 text-color font-semibold text-sm sm:text-[15px] ml-5">@$${item.price.toFixed(
         2
       )}</p>
-      <p class="item-total ml-auto opacity-80 font-semibold text-color text-[16px] -mt-2">$${(
+      <p class="item-total ml-auto opacity-80 font-semibold text-color text-[16px] sm:text-[15px] -mt-2 sm:-mt-[10px]">$${(
         item.price * item.quantity
       ).toFixed(2)}</p>
       </div>

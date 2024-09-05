@@ -4,8 +4,8 @@ module.exports = {
   theme: {
     screens: {
       mobile: "350px",
-      xl: "1200px",
-      md: "765px",
+      sm: "640px",
+      lg: "967px"
     },
     extend: {},
   },
