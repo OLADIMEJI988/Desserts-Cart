@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const addToCartBtn = productCard.querySelector(".addToCart");
     const content = productCard.querySelector(".content");
     const selected = productCard.querySelector(".selected");
+    const selected2 = productCard.querySelector(".selected2");
 
     addToCartBtn.addEventListener("click", () => {
       incrementAmount();
@@ -44,6 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
         orderButton.classList.add("hidden");
         addToCartBtn.classList.remove("hidden");
         selected.classList.remove(
+          "border-[3px]",
+          "border-solid",
+          "img-border-color"
+        );
+        selected2.classList.remove(
           "border-[3px]",
           "border-solid",
           "img-border-color"
@@ -97,6 +103,11 @@ document.addEventListener("DOMContentLoaded", function () {
           "border-solid",
           "img-border-color"
         );
+        selected2.classList.add(
+          "border-[3px]",
+          "border-solid",
+          "img-border-color"
+        );
         ordersActive.classList.remove("hidden");
         ordersActive.classList.add("flex-row");
         ordersInactive.classList.add("hidden");
@@ -128,9 +139,13 @@ document.addEventListener("DOMContentLoaded", function () {
       const cartItem = document.createElement("div");
       cartItem.classList.add("cart-item", "individual-cart-item");
       cartItem.innerHTML = `
-      <p class="font-semibold text-[15px] sm:text-[16px] text-color mb-2 sm:mb-[10px] mt-6">${item.name}</p>
+      <p class="font-semibold text-[15px] sm:text-[16px] text-color mb-2 sm:mb-[10px] mt-6">${
+        item.name
+      }</p>
       <div class="flex">
-      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${
+        item.quantity
+      }x</p>
       <p class="cart-item-price opacity-50 text-color font-semibold text-sm sm:text-[15px] mx-3 sm:mx-[18px]">@$${item.price.toFixed(
         2
       )}</p>
@@ -152,11 +167,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const orderButton = productCard.querySelector(".order");
       const addToCartBtn = productCard.querySelector(".addToCart");
       const selected = productCard.querySelector(".selected");
-      
+      const selected2 = productCard.querySelector(".selected2");
+
       // Reset UI for the removed item
       orderButton.classList.add("hidden");
       addToCartBtn.classList.remove("hidden");
       selected.classList.remove(
+        "border-[3px]",
+        "border-solid",
+        "img-border-color"
+      );
+      selected2.classList.remove(
         "border-[3px]",
         "border-solid",
         "img-border-color"
@@ -207,7 +228,9 @@ document.addEventListener("DOMContentLoaded", function () {
         item.name
       }</p>
       <div class="flex">
-      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${item.quantity}x</p>
+      <p class="text-[15px] sm:text-[16px] font-bold flex-row cart-color">${
+        item.quantity
+      }x</p>
       <p class="cart-item-price opacity-50 text-color font-semibold text-sm sm:text-[15px] ml-5">@$${item.price.toFixed(
         2
       )}</p>

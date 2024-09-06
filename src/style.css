@@ -52,4 +52,8 @@
       display: grid;
       grid-template-columns: 320px 320px 320px;
      }
+     .gRid{
+      display: grid;
+      grid-template-columns: 230px 230px 230px;
+     }
 }
