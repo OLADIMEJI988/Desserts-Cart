@@ -61,4 +61,9 @@
       grid-template-columns: 230px 230px 230px;
       gap: 20px;
      }
+     .mid_grid{
+      display: grid;
+      grid-template-columns: 250px 250px 250px;
+      gap: 20px;
+     }
 }
