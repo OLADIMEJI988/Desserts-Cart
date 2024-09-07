@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <p class="cart-item-price opacity-50 text-color font-semibold text-sm sm:text-[15px] ml-5">@$${item.price.toFixed(
         2
       )}</p>
-      <p class="item-total ml-auto opacity-80 font-semibold text-color text-[16px] sm:text-[15px] -mt-2 sm:-mt-[10px]">$${(
+      <p class="item-total ml-auto opacity-80 font-semibold text-color text-[16px] sm:text-[15px] -mt-2 sm:-mt-[10px] xl:mt-0">$${(
         item.price * item.quantity
       ).toFixed(2)}</p>
       </div>
