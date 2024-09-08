@@ -500,6 +500,11 @@ video {
   background-color: #230f08;
 }
 
+.mobile_grid{
+  display: grid;
+  grid-template-columns: 350px;
+}
+
 *, ::before, ::after {
   --tw-border-spacing-x: 0;
   --tw-border-spacing-y: 0;
@@ -1022,6 +1027,15 @@ video {
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
+@media (min-width: 400px) {
+  @media not all and (min-width: 640px) {
+    .xs\:max-sm\:xsMobileGrid{
+      display: grid;
+      grid-template-columns: 370px;
+    }
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:griD{
     display: grid;
@@ -1060,6 +1074,36 @@ video {
   .xl\:gRid{
     display: grid;
     grid-template-columns: 230px 230px 230px;
+  }
+}
+
+@media (min-width: 400px) {
+  .xs\:top-\[200px\] {
+    top: 200px;
+  }
+
+  .xs\:top-\[0px\] {
+    top: 0px;
+  }
+
+  .xs\:top-\[10px\] {
+    top: 10px;
+  }
+
+  .xs\:top-\[190px\] {
+    top: 190px;
+  }
+
+  .xs\:top-\[180px\] {
+    top: 180px;
+  }
+
+  .xs\:top-\[20px\] {
+    top: 20px;
+  }
+
+  .xs\:top-\[2000px\] {
+    top: 2000px;
   }
 }
 
@@ -1129,14 +1173,16 @@ video {
   }
 
   @media not all and (min-width: 1024px) {
-    .sm\:max-xl\:mx-32 {
-      margin-left: 8rem;
-      margin-right: 8rem;
+    .sm\:max-xl\:ml-auto {
+      margin-left: auto;
     }
 
-    .sm\:max-xl\:px-12 {
-      padding-left: 3rem;
-      padding-right: 3rem;
+    .sm\:max-xl\:mr-auto {
+      margin-right: auto;
+    }
+
+    .sm\:max-xl\:max-w-\[450px\] {
+      max-width: 450px;
     }
   }
 
@@ -1216,15 +1262,6 @@ video {
   }
 }
 
-@media (min-width: 967px) {
-  @media not all and (min-width: 1024px) {
-    .lg\:max-xl\:mx-32 {
-      margin-left: 8rem;
-      margin-right: 8rem;
-    }
-  }
-}
-
 @media (min-width: 1024px) {
   .xl\:top-\[180px\] {
     top: 180px;
@@ -1233,11 +1270,6 @@ video {
   .xl\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
-  }
-
-  .xl\:mx-20 {
-    margin-left: 5rem;
-    margin-right: 5rem;
   }
 
   .xl\:mx-3 {
@@ -1264,16 +1296,12 @@ video {
     margin-bottom: 1.5rem;
   }
 
-  .xl\:ml-2 {
-    margin-left: 0.5rem;
+  .xl\:ml-3 {
+    margin-left: 0.75rem;
   }
 
   .xl\:mr-0 {
     margin-right: 0px;
-  }
-
-  .xl\:mr-auto {
-    margin-right: auto;
   }
 
   .xl\:mt-0 {
@@ -1347,5 +1375,19 @@ video {
 
   .xl\:text-\[13px\] {
     font-size: 13px;
+  }
+
+  @media not all and (min-width: 1280px) {
+    .xl\:max-xxl\:px-7 {
+      padding-left: 1.75rem;
+      padding-right: 1.75rem;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .xxl\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }

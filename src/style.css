@@ -44,6 +44,14 @@
      .lineColor{
       background-color: #230f08;
      }
+     .mobile_grid{
+      display: grid;
+      grid-template-columns: 350px;
+     }
+     .xsMobileGrid{
+      display: grid;
+      grid-template-columns: 370px;
+     }
      .griD{
        display: grid;
        grid-template-columns: 320px 320px;
@@ -65,5 +73,8 @@
       display: grid;
       grid-template-columns: 250px 250px 250px;
       gap: 20px;
+     }
+     .center{
+      margin-left: 50%;
      }
 }
