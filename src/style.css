@@ -48,9 +48,13 @@
       display: grid;
       grid-template-columns: 350px;
      }
-     .xsMobileGrid{
+     .xxsMobileGrid{
       display: grid;
       grid-template-columns: 370px;
+     }
+     .xsMobileGrid{
+      display: grid;
+      grid-template-columns: 450px;
      }
      .griD{
        display: grid;

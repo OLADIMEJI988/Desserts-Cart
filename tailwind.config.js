@@ -3,7 +3,8 @@ module.exports = {
   content: ["./dist/**/*.{html,js}"],
   theme: {
     screens: {
-      xs: "400px",
+      xxs: "400px",
+      xs: "540px",
       sm: "640px",
       tablet:"750px",
       md:"860px",

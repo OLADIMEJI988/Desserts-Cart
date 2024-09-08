@@ -1,6 +1,1 @@
 npx tailwindcss -i ./src/style.css -o ./dist/styles.css --watch
-
-
-lg:mx-32 
-
-sm:max-xl:ml-auto sm:max-xl:mr-auto
